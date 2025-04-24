@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, url_for
 
 app = Flask(__name__)
 
-@app.route('/') # '/' is the root page(homepage) of the website #app decorator
+@app.route('/') 
 @app.route('/Homepage')
 def Homepage():
     return render_template('Homepage.html')
@@ -30,4 +30,4 @@ def kasih():
     return f'Terima kasih {nama}, kamu mengasih rating {rate}'
 
 if __name__ == "__main__":
-    app.run(debug=True) #run the app olny when this file is running, debug = true -> this tell you if your web have a bug
+    app.run(debug=True) #file hanya akan berjalan jika di run dari sini
