@@ -1,0 +1,25 @@
+{% extends 'Base.html' %}
+
+{% block head %}
+    <title>{{ title if title else 'Contact' }}</title>
+{% endblock %}
+
+{% block body %}
+    <div class="navbar">
+        <a href="/Homepage" style="background-color:#55c087;">Homepage</a>
+    </div>
+
+    <section class="custom-section kontak-section">
+        <h2 class="section-title">Kontak Saya</h2>
+        <ul class="contact-list">
+            <li><strong>Email:</strong> s4yedsult4n@gmail.com</li>
+            <li><strong>WhatsApp:</strong> 0821-1116-8243</li>
+            <li><strong>Instagram:</strong>
+                <a href="https://www.instagram.com/sydsulsultan?igsh=MXdvYW8wbXQ4aXV1Ng==" target="_blank">@sydsulsultan</a>
+            </li>
+            <li><strong>GitHub:</strong>
+                <a href="https://github.com/Susultan-svg" target="_blank">github.com/Susultan-svg</a>
+            </li>
+        </ul>
+    </section>
+{% endblock %}

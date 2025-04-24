@@ -1,0 +1,143 @@
+{% extends 'Base.html' %}
+
+{% block head %}
+    <title>Lirik Ada Band</title>
+{% endblock %}
+
+{% block body %}
+<!-- Navigasi -->
+<div class="navbar">
+  <a href="/Homepage" style="background-color:#55c087;">Homepage</a>
+</div>
+
+<!-- Header dengan gambar dan informasi lagu -->
+<header class="header">
+    <div class="container" style="display: flex; align-items: center; gap: 20px;">
+        <!-- Gambar sebagai link ke Spotify -->
+        <a href="https://open.spotify.com/track/2EHQj8X7KUJrEY0svesMP5?si=720af620b0f14034"
+           target="_blank"
+           title="Klik untuk memutar lagu di Spotify">
+           <img src="{{ url_for('static', filename='image/lagu.png') }}" height="200" alt="Lagu Ada Band">
+        </a>
+
+        <!-- Judul dan keterangan lagu -->
+        <div class="text">
+            <h1>MASIH (SAHABAT KEKASIHKU)</h1>
+            <h3>by Ada Band</h3>
+            <p>Klik gambar untuk memutar lagu di Spotify</p>
+        </div>
+    </div>
+</header>
+
+<br>
+
+<!-- Lirik Lagu -->
+<main>
+  <pre>
+Rasa cinta yang dulu t'lah hilang
+Kini berseri kembali
+T'lah kau coba lupakan dirinya
+Hapus cerita lalu
+
+[Pre-Chorus 1]
+Dan lihatlah
+Dirimu bagai bunga di musim semi
+Yang tersenyum
+Menatap indahnya dunia
+Yang seiring menyambut
+Jawaban s'gala gundahmu
+
+[Chorus]
+Walau badai menghadang
+Ingatlah ku kan slalu setia menjagamu
+Berdua kita lewati jalan yang berliku tajam
+
+[Verse 2]
+Setiap waktu wajahmu yang lugu
+Slalu menjadi langkahku
+Telah lama menanti dirimu
+Tempat ku kan berlabuh
+
+[Pre-Chorus 2]
+Cahaya hatiku
+Yakinlah kekal abadi selamanya
+Seperti bintang
+Yang sinarnya terangi s'luruh
+Ruang di jiwa
+Membawa kedamaian
+
+[Chorus]
+Walau badai menghadang
+Ingatlah ku kan slalu setia menjagamu
+Berdua kita lewati jalan yang berliku tajam
+Resah yang kau rasakan
+'Kan jadi bagian hidupku selamanya
+Letakkanlah segala lara di pundakku ini
+
+[Instrumental]
+
+[Chorus]
+Walau badai menghadang
+Ingatlah ku kan slalu setia menjagamu
+Berdua kita lewati jalan yang berliku tajam
+Resah yang kau rasakan
+'Kan jadi bagian hidupku selamanya
+Letakkanlah segala lara di pundakku ini
+
+[Outro]
+Ku 'kan s'lalu menjagamu
+Rasa cintaku padamu
+  </pre>
+</main>
+
+<!-- Footer dengan sumber dan form review -->
+<footer class="footer">
+
+    <!-- Tombol sumber original lirik -->
+    <a href="https://genius.com/Ada-band-masih-lyrics" target="_blank" title="Sumber asli lirik">
+        <button>Sumber Original lirik</button>
+    </a>
+
+    <br><br>
+
+    <!-- Form review lagu -->
+    <form action="/kasih" method="post" id="reviewForm"
+        style="border-radius: 30% 10% 30% 10%;
+               border-left: 4mm ridge rgba(133, 255, 189, 0.6);
+               padding: 20px;
+               background-color: rgba(255, 255, 255, 0.6);">
+
+        <p style="background-color: rgba(76, 213, 30, 0.45);
+                  border-radius: 15px;
+                  padding: 10px;
+                  margin-left: 30px;
+                  display: inline-block;">
+            <b>Review Lagu</b>
+        </p>
+
+        <!-- Input Nama -->
+        <div style="margin-top: 15px;">
+            <label for="nama"><b>Nama:</b></label>
+            <input type="text" id="nama" name="nama" required>
+        </div>
+
+        <!-- Input Rating -->
+        <div style="margin-top: 15px;">
+            <p><b>Rate:</b></p>
+            <label><input type="radio" name="rate" value="sangat buruk"> Sangat Buruk</label><br>
+            <label><input type="radio" name="rate" value="buruk"> Buruk</label><br>
+            <label><input type="radio" name="rate" value="biasa"> Biasa</label><br>
+            <label><input type="radio" name="rate" value="bagus"> Bagus</label><br>
+            <label><input type="radio" name="rate" value="sangat bagus"> Sangat Bagus</label>
+        </div>
+
+        <!-- Tombol Submit -->
+        <div style="margin-top: 20px;">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    <!-- Hak cipta -->
+    <small>&copy; ADA Band</small>
+</footer>
+{% endblock %}

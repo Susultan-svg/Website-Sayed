@@ -1,0 +1,36 @@
+{% extends 'Base.html' %}
+
+{% block head %}
+    <title>{{ title if title else 'Projects' }}</title>
+{% endblock %}
+
+{% block body %}
+    <div class="navbar">
+        <a href="/Homepage" style="background-color:#55c087;">Homepage</a>
+    </div>
+
+    <section class="custom-section">
+        <h2 class="section-title">Proyek aku</h2>
+
+        <div class="project-box">
+            <h3 class="project-title">Power Supply DIY</h3>
+            <p class="project-desc">
+                Power Supply DC yang dirakit diri sendiri
+            </p>
+        </div>
+
+        <div class="project-box">
+            <h3 class="project-title">Website ini</h3>
+            <p class="project-desc">
+                Dibuat dengan Flask, HTML, dan CSS untuk memperkenalkan diriku ke dunia.
+            </p>
+        </div>
+      
+        <div class="project-box">
+            <h3 class="project-title">Robot Maveric 2.0</h3>
+            <p class="project-desc">
+                Bersama teman seangkatan saya (Jonathan dan Kiran), Kami membuat robot transporter untuk lomba Tecnocorner UGM 2025
+            </p>
+        </div>
+    </section>
+{% endblock %}

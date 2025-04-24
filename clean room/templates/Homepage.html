@@ -1,0 +1,101 @@
+{% extends 'Base.html' %}
+
+{% block head %}
+    <title>{{ title if title else 'Homepage' }}</title>
+    <link rel="icon" type="image/jpg" href="{{ url_for('static', filename='image/Favicon_aku.jpg') }}">
+{% endblock %}
+
+{% block body %}
+    <!-- Navigasi -->
+    <div class="navbar">
+        <a href="/About Me">About Me</a>
+        <a href="/Projects">Projects</a>
+        <a href="/Contact">Contact</a>
+    </div>
+    <!-- Header dan profil-->
+    <header class="header" style="padding: 2px;">
+        <h1 id="page_title">Homepage</h1>
+        <div style="display: flex; gap: 40px;">
+            <div style="display: flex; flex-shrink: 0;">
+                <img 
+                    src="{{ url_for('static', filename='image/profile_pic.jpg') }}"
+                    height="200"
+                    title="orang gila"
+                    style="padding: 10px; border-radius: 15px;"
+                    alt="foto aku"
+                >
+                <div class="text">
+                    <h1>Sayed Sultan Maghrifatullah</h1>
+                    <h3>UNPAD, Teknik Elektro S1</h3>
+                    <p>Hallo!, Selamat datang ke website aku ༼ つ ◕_◕ ༽つ</p>
+                </div>
+            </div>
+
+            <main>
+                <h2>Tentang aku:</h2>
+                <p>
+                    Hallo, Namaku Sayed. aku lahir tahun 2006 di Bekasi. aku suka apapun yang terlibat dengan Ilmu MIPA,
+                    aku juga suka main Bola dan musik terutama gitar (genre musik: Surf Rock) 🏄 🤘
+                </p>
+            </main>
+        </div>
+    </header>
+
+    <main>
+        <!-- Tabel Jatwal -->
+        <section class="custom-section"> 
+            <h2 class="section-title">Jatwal Kuliah Saya<h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hari</th>
+                        <th>Jam</th>
+                        <th>Mata Kuliah</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Senin</td>
+                        <td>08:00 - 11:00</td>
+                        <td>Pemrograman II</td>
+                    </tr>
+                    <tr>
+                        <td>Selasa</td>
+                        <td>08:00 - 11:00</td>
+                        <td>Elektronika Analog</td>
+                    </tr>
+                    <tr>
+                        <td>Rabu</td>
+                        <td>08:00 - 11:00</td>
+                        <td>Kalkulus II</td>
+                    </tr>
+                    <tr>
+                        <td>Rabu</td>
+                        <td>10:30 - 13:00</td>
+                        <td>Pratikum Elektronika Digital</td>
+                    </tr>
+                    <tr>
+                        <td>Rabu</td>
+                        <td>13:00 - 15:30</td>
+                        <td>Pratikum Elektronika Analog</td>
+                    </tr>
+                    <tr>
+                        <td>Kamis</td>
+                        <td>08:00 - 09:30</td>
+                        <td>Elektronika Digital</td>
+                    </tr>
+                    <tr>
+                        <td>Kamis</td>
+                        <td>10:00 - 11:30</td>
+                        <td>Fisika II</td>
+                    </tr>
+                    <tr>
+                        <td>Jumat</td>
+                        <td>08:00 - 11:00</td>
+                        <td>Statistika dan Probabilitas</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+{% endblock %}
