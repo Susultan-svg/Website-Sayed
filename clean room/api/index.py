@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -7,11 +7,11 @@ app = Flask(__name__)
 def Homepage():
     return render_template('Homepage.html')
 
-@app.route('/AboutMe')
+@app.route('/AboutMe') 
 def About_Me():
-    return render_template('AboutMe.html', title="Halaman About Me")
+    return render_template('About Me.html', title="Halaman About Me")
 
-@app.route('/LaguFavorit')
+@app.route('/LaguFavorit') 
 def Lagu():
     return render_template('Lagu.html', title="Halaman Lagu")
 
@@ -27,8 +27,4 @@ def Contact():
 def kasih():
     nama = request.form['nama']
     rate = request.form['rate']
-    return f'Terima kasih {nama}, kamu memberi rating {rate}'
-
-# Tidak butuh app.run() disini
-# if __name__ == "__main__":
-#     app.run(debug=True) #file hanya akan berjalan jika di run dari sini
+    return f'Terima kasih {nama}, kamu mengasih rating {rate}'
