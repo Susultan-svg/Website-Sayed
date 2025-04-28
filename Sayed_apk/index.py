@@ -17,11 +17,11 @@ def Lagu():
 
 @app.route('/Projects')
 def Projects():
-    return render_template('Projects.html', title="Halamat Projects")
+    return render_template('Projects.html', title="Halaman Projects")
 
 @app.route('/Contact')
 def Contact():
-    return render_template('Contact.html', title="Halamat Contact")
+    return render_template('Contact.html', title="Halaman Contact")
 
 @app.route('/kasih', methods=['POST'])
 def kasih():
