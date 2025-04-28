@@ -31,4 +31,4 @@ def kasih():
     return f'Terima kasih {nama}, kamu mengasih rating {rate}'
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
