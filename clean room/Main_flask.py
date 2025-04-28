@@ -28,6 +28,3 @@ def kasih():
     nama = request.form['nama']
     rate = request.form['rate']
     return f'Terima kasih {nama}, kamu mengasih rating {rate}'
-
-if __name__ == "__main__":
-    app.run(debug=True) #file hanya akan berjalan jika di run dari sini
