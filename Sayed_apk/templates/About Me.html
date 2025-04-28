@@ -6,7 +6,7 @@
     {% else %}
         <title>Biodata</title>
     {% endif %}
-    <link rel="icon" type="image/jpg" href="{{ url_for('static', filename='image/Favicon_aku.jpg') }}">
+    
 {% endblock %}
 
 {% block body %}
@@ -42,7 +42,7 @@ Tgl lahir: 12-10-2006
             <strong>Lagu Latar Belakang:</strong> Come Along by Dan Lebo Lebowitz
         </div>
         <audio controls loop>
-            <source src="{{ url_for('static', filename='suara/Come Along - Dan _Lebo_ Lebowitz, Tone Seeker.mp3') }}" type="audio/mpeg">
+            <source src="{{ url_for('static', filename='suara/Pufino_Enjoy.mp3') }}" type="audio/mpeg">
             Browsermu tidak mendukung pemutar audio.
         </audio>
     </div>
@@ -59,10 +59,15 @@ Tgl lahir: 12-10-2006
             </ul>
         </div>
         <div style="flex-shrink: 0;">
-            <img src="{{ url_for('static', filename='image/pendidikan.jpg') }}"
-                alt="foto pendidikan"
-                style="width: 200px; height: auto; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2);">
+            <picture>
+              <source srcset="{{ url_for('static', filename='images/pendidikan.png') }}" type="image/png">
+              <source srcset="{{ url_for('static', filename='images/pendidikan.jpg') }}" type="image/jpeg">
+              <img src="{{ url_for('static', filename='images/pendidikan.jpg') }}"
+                   alt="foto pendidikan"
+                   style="width: 200px; height: auto; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2);">
+            </picture>
         </div>
+          
     </section>
 
     <!-- Hobi -->
