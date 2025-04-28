@@ -13,7 +13,7 @@ def About_Me():
 
 @app.route('/LaguFavorit')
 def Lagu():
-    return render_template('lagu.html', title="Halaman Lagu")
+    return render_template('Lagu.html', title="Halaman Lagu")
 
 @app.route('/Projects')
 def Projects():
@@ -21,8 +21,7 @@ def Projects():
 
 @app.route('/Contact')
 def Contact():
-    return render_template('Contact.html', title="Halaman" \
-    "Contact")
+    return render_template('Contact.html', title="Halaman Contact")
 
 @app.route('/kasih', methods=['POST'])
 def kasih():
@@ -31,4 +30,4 @@ def kasih():
     return f'Terima kasih {nama}, kamu mengasih rating {rate}'
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
